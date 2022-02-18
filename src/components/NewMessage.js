@@ -15,7 +15,7 @@ const NewMessage = () => {
   };
 
   const keyPressHandler = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && messageInput.length) {
       dispatch(addMessageAction(message));
       setMessagesInput("");
     }
